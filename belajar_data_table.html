@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>belajar tabel html</title>
+
+        <link rel="stylesheet" href="jquery.dataTables.min.css"></link>
+        <script src="jquery-3.7.0.min.js"></script> 
+        <script src="jquery.dataTables.min.js"></script>
+    </head>
+    <body>
+        <table border="1" cellpadding="10" id="table1">
+        <thead>
+        <tr>
+            <th>Nama Buah</th> 
+            <th>Harga per Kg</th>
+            <th>Stok (Sack)</th>
+            <th>Supplier</th>
+        </tr>
+        </thead>
+        <tr>
+            <td>Apel Merah</td>
+            <td>Rp 35.000</td>
+            <td>15</td>
+            <td><a href="#">Malang Fresh</a></td>
+        </tr>
+        <tr>
+            <td>Jeruk Medan</td>
+            <td>Rp 22.000</td>
+            <td>20</td>
+            <td><a href="#">Sumatera Tani</a></td>
+        </tr>
+        <tr>
+            <td>Mangga Harum Manis</td>
+            <td>Rp 28.000</td>
+            <td>10</td>
+            <td><a href="#">Probolinggo Jaya</a></td>
+        </tr>
+        <tr>
+            <td>Pisang Raja</td>
+            <td>Rp 15.000</td>
+            <td>30</td>
+            <td><a href="#">Lokal Kebun</a></td>
+        </tr>
+        </table>
+
+        <script>
+            $(document).ready(function () {
+                $('#table1').DataTable();
+            });
+        </script>
+    </body>
+</html>
