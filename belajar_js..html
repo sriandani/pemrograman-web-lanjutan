@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>input data inventaris buah</title>
+    </head>
+    <body>
+        <form name="form_buah">
+            <h1><br>Input Inventaris Buah ke Gudang</h1>
+            <pre>
+                Nama Buah      : <input type="text" size="20" name="nama_buah">
+                Harga per Kg   : <input type="text" size="11" name="harga_buah">
+                Jumlah Stok    : <input type="text" size="11" name="stok_buah">
+            </pre>
+            <input type="button" value="Cek Total Aset" onclick="hitungAset()">
+            <input type="button" value="Simpan Data" onclick="simpan()">
+            <input type="reset" value="Ulang">
+        </form>
+
+        <script language="JavaScript">
+            function hitungAset() {
+                var harga = parseFloat(document.form_buah.harga_buah.value);
+                if (isNaN(harga)) harga = 0;
+
+                var stok = parseFloat(document.form_buah.stok_buah.value);
+                if (isNaN(stok)) stok = 0;
+
+                var total = harga * stok;
+                alert("Total aset untuk buah ini adalah = Rp " + total);
+            }
+
+            function simpan() {
+                var nama = document.form_buah.nama_buah.value;
+                if (nama == "") {
+                    alert("Nama buah harus diisi!");
+                } else {
+                    alert("Data buah " + nama + " berhasil disimpan ke sistem.");
+                }
+            }
+        </script>
+    </body>
+</html>
